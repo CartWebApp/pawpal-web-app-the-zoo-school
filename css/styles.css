@@ -1,0 +1,71 @@
+:root {
+    --header-background: #5AC8B0;
+    --header-text: #444B54;
+    --body-background: #FFFDF9;
+    --body-text: #5d635b;
+    --box-background: #F7E4C2;
+    --input-background: #FFFDF9;
+    --btn-background: #F96D5A;
+    --icon-color: #444B54;
+    --hover-color: #79D9C0;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--body-background);
+    color: var(--body-text);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav Bar */
+
+nav {
+    width: 100vw;
+    /* height: 7rem; */
+    background: var(--header-background);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    & li{
+        align-self: center;
+        & a {
+            display: block;
+            color: var(--header-text);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            height: 75px;
+            align-content: center;
+            & img {
+                height: 64px;
+            }
+        }
+        a:hover {
+            background: var(--hover-color);
+        }
+    }
+    
+}
+
+.logo {
+    justify-self: start;
+    
+}
+
+
+/* Button Colors */
+a, button {
+    color: var(--body-text);
+    background-color: var(--btn-background);
+    text-decoration: none;
+}
