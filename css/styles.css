@@ -15,16 +15,17 @@
 body {
     background-color: var(--body-background);
     color: var(--body-text);
-    font-family: 'Arial', sans-serif;
+    font-family: 'inter', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Nav Bar */
 
 nav {
     width: 100vw;
-    /* height: 7rem; */
+    height: 10vh;
     background: var(--header-background);
 }
 
@@ -58,14 +59,46 @@ ul {
 }
 
 .logo {
-    justify-self: start;
+    justify-self: flex-start;
     
 }
 
-
 /* Button Colors */
 a, button {
-    color: var(--body-text);
+    color: var(--header-text);
     background-color: var(--btn-background);
     text-decoration: none;
+    border-radius: 30px;
+}
+
+/* Index Styles */
+
+#index-hero {
+    display: grid;
+    background-image: url('/images/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    & a {
+        text-align: center;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+        justify-self: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 620px;
+        height: 100px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+#index-main {
+
 }
