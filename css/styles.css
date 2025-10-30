@@ -100,5 +100,24 @@ a, button {
 }
 
 #index-main {
+    display: flex;
+    flex-direction: column;
+}
 
+/* Log In Styles */
+
+#log-in-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    width: 500px;
+    height: 175px;
+    padding: 51px 163px;
+    background-color: var(--box-background);
+    color: var(--header-text);
+    border-radius: 30px;
 }
