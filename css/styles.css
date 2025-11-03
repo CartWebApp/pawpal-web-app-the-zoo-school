@@ -111,6 +111,90 @@ a, button {
     flex-direction: column;
     align-items: center;
 }
+.type-one-index {
+    display: grid;
+    grid-template: 48px 300px / 300px 700px;
+    grid-template-areas: ". title"
+                         "image content";
+    gap: 48px 150px;
+}
+
+.type-two-index {
+    display: grid;
+    grid-template: 48px 300px / 700px 300px;
+    grid-template-areas: "title ."
+                         "content image";
+    gap: 48px 150px;
+}
+
+#content-index:nth-of-type(1) {
+    & article::before {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: url(/images/dog-walk.png) lightgray -297.621px -430.533px / 386.644% 257.794% no-repeat;
+        translate: -450px;
+    }
+}
+
+#content-index:nth-of-type(2) {
+    & article::before {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: url(/images/dog-food.png) lightgray -267.839px -128px / 277.966% 185.333% no-repeat;
+        translate: 850px;
+    }
+}
+
+#content-index:nth-of-type(3) {
+    & article::before {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: url(/images/vet-visit.png)  lightgray -74.973px 0px / 149.982% 100% no-repeat;
+        translate: -450px;
+    }
+}
+
+
+#content-index {
+    & img {
+        grid-area: image;
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    & h2 {
+        grid-area: title;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    & article {
+        grid-area: content;
+        height: 300px;
+        width: 700px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        background: var(--box-background);
+        & p {
+            translate: 0px -300px;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px;
+        }
+    }
+}
 
 /* Log In Styles */
 
