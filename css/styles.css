@@ -220,3 +220,105 @@ a, button {
     align-items: center;
 }
 
+
+
+/* Pet Profiles Styles */
+
+#pet-profiles-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+#profiles-title {
+    font-size: 80px;
+}
+
+.pet-profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pet-profile, #frank-profile-overview {
+    width: 260px;
+    height: 390px;
+    background-color: var(--box-background);
+    border-radius: 30px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+        height: 100px;
+        width: 100px;
+        border-radius: 30px;
+        border: 1px #000 solid;
+        flex-shrink: 0;
+    }
+
+    & article {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--body-background);
+        height: 75%;
+        width: 260px;
+        border: #000 1px solid;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            display: flex;
+            font-size: 20px;
+            background-color: var(--box-background);
+            border-radius: 30px;
+            border: #000 1px solid;
+            width: 130px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            color: var(--body-text);
+        }
+        & p {
+            color: var(--body-text);
+        }
+    }
+}
+
+
+#create-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & a {
+        display: flex;
+        background-color: var(--input-background);
+        height: 100px;
+        width: 100px;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        border: #000 1px solid;
+    }
+}
+
+/* About Styles */
+
+/* Create Pet Profile Styles */
+
+/* Account Styles */
+
+/* Personal Pet Profile Styles */
+
+/* Contact Styles */
+
+/* Footer Styles */
+
