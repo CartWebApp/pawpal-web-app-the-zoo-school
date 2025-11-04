@@ -396,11 +396,191 @@ a, button {
 
 /* About Styles */
 
+#about-section-first {
+    display: grid;
+    grid-template: 50px 400px 50px / 700px 500px;
+    grid-template-areas: "title image"
+                         "content image"
+                         ". image";
+
+    gap: 10px 100px;
+}
+
+#about-section-second {
+    display: grid;
+    grid-template: 50px 400px 50px / 500px 700px;
+    grid-template-areas: "image title"
+                         "image content"
+                         "image .";
+    gap: 10px 100px;
+}
+
+[id^="about-section-"] {
+    justify-self: center;
+    & img {
+        grid-area: image;
+        width: 500px;
+        height: 500px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    & h2 {
+        grid-area: title;
+        font-size: 60px;
+        font-weight: 400;
+        margin: 0px;
+    }
+    & article {
+        grid-area: content;
+        height: 400px;
+        width: 700px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        background: var(--box-background);
+        & p {
+            font-size: 35px;
+            font-weight: 400;
+            padding: 20px;
+        }
+    }
+}
+
+#team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 175px;
+    & img {
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    & h2 {
+        font-size: 60px;
+        font-weight: 400;
+        margin-bottom: 0px;
+    }
+}
+
+#about-hero {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 100px;
+} 
+
 /* Create Pet Profile Styles */
 
 /* Account Styles */
 
 /* Personal Pet Profile Styles */
+
+body#frank {
+    background: url(/images/grass.png);
+    background-repeat: repeat;
+}
+
+#frank-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    position: absolute;
+    z-index: 1;
+    & img {
+            height: 250px;
+            width: 250px;
+            border-radius: 30px;
+            z-index: 2;
+            translate: 50px;
+        }
+    & article {
+        width: 500px;
+        height: 100px;
+        align-items: center;
+        justify-items: center;
+        border: 2px solid #000;
+        border-radius: 30px;
+        background: var(--body-background);
+        translate: -125px;
+        & p {
+            font-size: 60px;
+            margin: 15px;
+            margin-right: 100px;
+            justify-self: end;
+        }
+    }
+}
+
+#frank-info {
+    margin-top: 125px;
+    width: 100%;
+    display: grid;
+    grid-template: 200px 1fr 1fr 1fr / 1fr 1fr;
+    grid-template-areas: ". ."
+                         "activities activities"
+                         "graph alerts"
+                         "info feeding";
+    gap: 20px;
+    align-items: flex-end;
+    justify-items: center;
+    border-radius: 30px 30px 0px 0px;
+    border: 2px solid #000;
+    background: var(--box-background);
+    & article h2 {
+        color: var(--text-body);
+        font-size: 60px;
+        font-weight: 400;
+    }
+    & article textarea {
+        height: 500px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        background: var(--input-background);
+        font-size: 45px;
+        padding: 15px;
+        resize: none;
+    }
+}
+
+#frank-activities {
+    grid-area: activities;
+    & textarea {
+        width: 1000px;
+    }
+}
+
+#frank-graph {
+    grid-area: graph;
+    background-color: var(--body-background);
+    border-radius: 30px;
+    border: 1px solid #000;
+    width: 500px;
+}
+
+#frank-alerts {
+    grid-area: alerts;
+    & textarea {
+        width: 500px;
+    }
+}
+
+#frank-info-box {
+    grid-area: info;
+    & textarea {
+        width: 500px;
+    }
+}
+
+#frank-feeding {
+    grid-area: feeding;
+    & textarea {
+        width: 500px;
+    }
+}
 
 /* Contact Styles */
 
@@ -412,6 +592,7 @@ footer {
     width: 100vw;
     align-items: center;
     justify-content: center;
+    background: var(--body-background);
     color: var(--body-text);
     border-top: rgba(0, 0, 0, 0.25) 1px solid;
 }
